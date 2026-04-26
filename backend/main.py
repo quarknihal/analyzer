@@ -153,7 +153,7 @@ def update_submission(submission_id: int, status: str, db: Session = Depends(get
 @app.post("/admin-login")
 def admin_login(email: str, password: str):
     # Hardcoded admin (for now)
-    if email == "nihalkainth023@gmail.com" and password == "@Skilly13":
+    if email == "test@xyz.com" and password == "12345678":
         return {"status": "success"}
     
     return {"status": "fail"}
