@@ -6,7 +6,7 @@ function Dashboard() {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/tasks")
+    axios.get("https://analyzer-vndt.onrender.com/tasks")
       .then(res => setTasks(res.data));
   }, []);
 

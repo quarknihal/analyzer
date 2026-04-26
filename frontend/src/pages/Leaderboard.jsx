@@ -6,7 +6,7 @@ function Leaderboard() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/leaderboard")
+    axios.get("https://analyzer-vndt.onrender.com/leaderboard")
       .then(res => setData(res.data));
   }, []);
 

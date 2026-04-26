@@ -7,7 +7,7 @@ function AdminLogin() {
 
   const handleLogin = async () => {
     const res = await axios.post(
-      "http://localhost:8000/admin-login",
+      "https://analyzer-vndt.onrender.com/admin-login",
       null,
       {
         params: { email, password }

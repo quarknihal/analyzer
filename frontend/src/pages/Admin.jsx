@@ -16,18 +16,18 @@ function Admin() {
   }, []);
 
   const loadTasks = () => {
-    axios.get("http://localhost:8000/tasks")
+    axios.get("https://analyzer-vndt.onrender.com/tasks")
       .then(res => setTasks(res.data));
   };
 
   const loadSubmissions = () => {
-    axios.get("http://localhost:8000/submissions")
+    axios.get("https://analyzer-vndt.onrender.com/submissions")
       .then(res => setSubmissions(res.data));
   };
 
   // Create task
   const createTask = async () => {
-    await axios.post("http://localhost:8000/create-task", null, {
+    await axios.post("https://analyzer-vndt.onrender.com/create-task", null, {
       params: { title, description: desc }
     });
 
@@ -37,13 +37,13 @@ function Admin() {
 
   // Delete task
   const deleteTask = async (id) => {
-    await axios.delete(`http://localhost:8000/delete-task/${id}`);
+    await axios.delete(`https://analyzer-vndt.onrender.com/delete-task/${id}`);
     loadTasks();
   };
 
   // Override AI
   const updateStatus = async (id, status) => {
-    await axios.put(`http://localhost:8000/update-submission/${id}`, null, {
+    await axios.put(`https://analyzer-vndt.onrender.com/update-submission/${id}`, null, {
       params: { status }
     });
 
@@ -117,7 +117,7 @@ return (
 
             {/* IMAGE */}
             <img
-              src={`http://localhost:8000/${s.image_path}`}
+              src={`https://analyzer-vndt.onrender.com/${s.image_path}`}
               alt="submission"
               className="w-full h-40 object-cover rounded mt-2"
             />

@@ -10,7 +10,7 @@ function Upload() {
   const email = localStorage.getItem("user");
 
   useEffect(() => {
-    axios.get("http://localhost:8000/tasks")
+    axios.get("https://analyzer-vndt.onrender.com/tasks")
       .then(res => setTasks(res.data));
   }, []);
 
@@ -22,7 +22,7 @@ function Upload() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/upload",
+        "https://analyzer-vndt.onrender.com/upload",
         formData,
         {
           params: {
